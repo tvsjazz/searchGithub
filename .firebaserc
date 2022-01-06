@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portal-badesc": {
+      "hosting": {
+        "api-github": [
+          "tvscompasso"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portal-badesc"
+  }
+}

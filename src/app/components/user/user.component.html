@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-header">
+    <p class="d-flex justify-content-between">
+      <button class="btn btn-primary" role="button" (click)="showRepos()">
+        Repos
+      </button>
+      <button class="btn btn-primary" type="button" (click)="showStarred()">
+        Starred
+      </button>
+    </p>
+  </div>
+  <img src={{avatar_url}} class="card-img-top" alt="picture user">
+  <div class="card-body">
+    <div class="user" *ngIf="isUser">
+      <h5 class="card-title">{{name}}</h5>
+      <span>{{location}}</span>
+      <p>{{bio}}</p>
+    </div>
+    <div class="repos" *ngIf="isRepos">
+      <app-repos [repos]="repos"></app-repos>
+    </div>
+    <div class="starred" *ngIf="isStarred">
+      <app-starred [starreds]="starreds"></app-starred>
+    </div>
+  </div>
+</div>
